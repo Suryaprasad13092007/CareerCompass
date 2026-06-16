@@ -14,4 +14,9 @@ public class CareerPath {
     public String getDescription(){
         return description;
     }
+
+    public void displayCareerPath(){
+        System.out.println("Career Path : "+pathName);
+        System.out.println("Description : "+description);
+    }
 }

@@ -27,4 +27,11 @@ public class Student{
         return interest;
     }
 
+    public void displayStudentInfo(){
+        System.out.println("Name : "+name);
+        System.out.println("Branch : "+branch);
+        System.out.println("Year : "+year);
+        System.out.println("Interest : "+interest);
+    }
+
 }
