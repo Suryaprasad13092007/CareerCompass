@@ -11,4 +11,20 @@ public class Student{
         this.interest = interest;
     }
 
+    public String getName(){
+        return name;
+    }
+
+    public String getBranch(){
+        return branch;
+    }
+
+    public int getYear(){
+        return year;
+    }
+
+    public String getInterest(){
+        return interest;
+    }
+
 }

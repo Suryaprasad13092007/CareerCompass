@@ -6,4 +6,12 @@ public class CareerPath {
         this.pathName = pathName;
         this.description = description;
     }
+
+    public String getPathName(){
+        return pathName;
+    }
+
+    public String getDescription(){
+        return description;
+    }
 }
