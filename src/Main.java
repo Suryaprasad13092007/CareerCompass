@@ -39,6 +39,24 @@ public class Main {
             System.err.println();
         }
 
+        System.out.println("\nEnter student name to search : ");
+        String searchName = sc.nextLine();
+
+        boolean found = false;
+        for(Student s : students){
+            if(s.getName().equalsIgnoreCase(searchName)){
+                System.out.println("\nStudent Found : ");
+                s.displayStudentInfo();
+
+                found = true ;
+                break;
+            }
+        }
+
+        if(!found){
+            System.out.println("Student not found.");
+        }
+
         CareerPath careerPath = new CareerPath("Software Engineer","Designs and develops software applications.");
 
         careerPath.displayCareerPath();
