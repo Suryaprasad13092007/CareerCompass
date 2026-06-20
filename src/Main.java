@@ -57,8 +57,28 @@ public class Main {
             System.out.println("Student not found.");
         }
 
-        CareerPath careerPath = new CareerPath("Software Engineer","Designs and develops software applications.");
 
-        careerPath.displayCareerPath();
+        System.out.println("\nEnter student name to delete : ");
+        String deleteName = sc.nextLine();
+        boolean deleted = false;
+        for(int i = 0 ; i < students.size() ; i++){
+            if(students.get(i).getName().equalsIgnoreCase(deleteName)){
+                students.remove(i);
+                deleted = true;
+                break;
+            }
+        }
+
+        if(deleted){
+            System.out.println("Student deleted successfully.");
+        }else{
+            System.out.println("Student not found.");
+        }
+
+        System.out.println("\n===== Updated Student List =====");
+        for(Student s : students){
+            s.displayStudentInfo();;
+            System.out.println();
+        }
     }
 }
