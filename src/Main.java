@@ -3,8 +3,46 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args){
         System.out.println("Welcome to Career Compass");
+
         Scanner sc = new Scanner(System.in);
         ArrayList<Student> students = new ArrayList<>();
+
+        int choice;
+        do{
+            System.out.println("\n===== Career Compass Menu =====");
+            System.out.println("1. Add Student ");
+            System.out.println("2. Dispay Students ");
+            System.out.println("3. Search Student ");
+            System.out.println("4. Delete Student ");
+            System.out.println("5. Exit! ");
+
+            System.out.println("Enter your choice : ");
+            choice = sc.nextInt();
+            sc.nextLine();
+                    switch (choice) {
+            case 1:
+                System.out.println("Add Student Selected");
+                break;
+            case 2:
+                System.out.println("Display Students Selected");
+                break;
+            case 3:
+                System.out.println("Search Student Selected");
+                break;
+            case 4:
+                System.out.println("Delete Student Selected");
+                break;
+            case 5:
+                System.out.println("Thank you for using Career Compass!");
+                break;
+        
+            default:
+                System.out.println("Invalid Choice!");
+                break;
+        }
+        }while(choice!=5);
+
+
 
         System.out.println(" How many students do you want to add ? ");
         int count = sc.nextInt();
