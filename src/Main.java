@@ -50,7 +50,18 @@ public class Main {
 
                 break;
             case 2:
-                System.out.println("Display Students Selected");
+
+            if(students.isEmpty()){
+                System.out.println("No Students Available.");
+            }else{
+        System.out.println("\n====== Student List ======");
+
+        for(Student s : students){
+            s.displayStudentInfo();
+            System.err.println();
+        }
+            }
+                
                 break;
             case 3:
                 System.out.println("Search Student Selected");
@@ -71,12 +82,7 @@ public class Main {
 
 
  
-        System.out.println("\n====== Student List ======");
-
-        for(Student s : students){
-            s.displayStudentInfo();
-            System.err.println();
-        }
+      
 
         System.out.println("\nEnter student name to search : ");
         String searchName = sc.nextLine();
