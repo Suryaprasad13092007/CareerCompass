@@ -21,29 +21,6 @@ public class Main {
             sc.nextLine();
                     switch (choice) {
             case 1:
-                System.out.println("Add Student Selected");
-                break;
-            case 2:
-                System.out.println("Display Students Selected");
-                break;
-            case 3:
-                System.out.println("Search Student Selected");
-                break;
-            case 4:
-                System.out.println("Delete Student Selected");
-                break;
-            case 5:
-                System.out.println("Thank you for using Career Compass!");
-                break;
-        
-            default:
-                System.out.println("Invalid Choice!");
-                break;
-        }
-        }while(choice!=5);
-
-
-
         System.out.println(" How many students do you want to add ? ");
         int count = sc.nextInt();
         sc.nextLine();
@@ -69,7 +46,31 @@ public class Main {
         Student student = new Student(name,branch,year,interest);
         students.add(student);
         }
+         System.out.println(" Students Added Successfully!");
 
+                break;
+            case 2:
+                System.out.println("Display Students Selected");
+                break;
+            case 3:
+                System.out.println("Search Student Selected");
+                break;
+            case 4:
+                System.out.println("Delete Student Selected");
+                break;
+            case 5:
+                System.out.println("Thank you for using Career Compass!");
+                break;
+        
+            default:
+                System.out.println("Invalid Choice!");
+                break;
+        }
+        }while(choice!=5);
+
+
+
+ 
         System.out.println("\n====== Student List ======");
 
         for(Student s : students){
