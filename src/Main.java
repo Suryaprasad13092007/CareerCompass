@@ -64,7 +64,33 @@ public class Main {
                 
                 break;
             case 3:
-                System.out.println("Search Student Selected");
+                if(students.isEmpty()) {
+
+        System.out.println("No students available.");
+
+    } else {
+
+        System.out.print("Enter student name to search: ");
+        String searchName = sc.nextLine();
+
+        boolean found = false;
+
+        for(Student s : students) {
+
+            if(s.getName().equalsIgnoreCase(searchName)) {
+
+                System.out.println("\nStudent Found:");
+                s.displayStudentInfo();
+
+                found = true;
+                break;
+            }
+        }
+
+        if(!found) {
+            System.out.println("Student not found.");
+        }
+    }
                 break;
             case 4:
                 System.out.println("Delete Student Selected");
@@ -83,25 +109,6 @@ public class Main {
 
  
       
-
-        System.out.println("\nEnter student name to search : ");
-        String searchName = sc.nextLine();
-
-        boolean found = false;
-        for(Student s : students){
-            if(s.getName().equalsIgnoreCase(searchName)){
-                System.out.println("\nStudent Found : ");
-                s.displayStudentInfo();
-
-                found = true ;
-                break;
-            }
-        }
-
-        if(!found){
-            System.out.println("Student not found.");
-        }
-
 
         System.out.println("\nEnter student name to delete : ");
         String deleteName = sc.nextLine();
