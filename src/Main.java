@@ -93,7 +93,35 @@ public class Main {
     }
                 break;
             case 4:
-                System.out.println("Delete Student Selected");
+                if(students.isEmpty()) {
+
+        System.out.println("No students available.");
+
+    } else {
+
+        System.out.print("Enter student name to delete: ");
+        String deleteName = sc.nextLine();
+
+        boolean deleted = false;
+
+        for(int i = 0; i < students.size(); i++) {
+
+            if(students.get(i).getName().equalsIgnoreCase(deleteName)) {
+
+                students.remove(i);
+
+                deleted = true;
+
+                break;
+            }
+        }
+
+        if(deleted) {
+            System.out.println("Student deleted successfully.");
+        } else {
+            System.out.println("Student not found.");
+        }
+    }
                 break;
             case 5:
                 System.out.println("Thank you for using Career Compass!");
@@ -110,22 +138,6 @@ public class Main {
  
       
 
-        System.out.println("\nEnter student name to delete : ");
-        String deleteName = sc.nextLine();
-        boolean deleted = false;
-        for(int i = 0 ; i < students.size() ; i++){
-            if(students.get(i).getName().equalsIgnoreCase(deleteName)){
-                students.remove(i);
-                deleted = true;
-                break;
-            }
-        }
-
-        if(deleted){
-            System.out.println("Student deleted successfully.");
-        }else{
-            System.out.println("Student not found.");
-        }
 
         System.out.println("\n===== Updated Student List =====");
         for(Student s : students){
