@@ -14,7 +14,8 @@ public class Main {
             System.out.println("2. Dispay Students ");
             System.out.println("3. Search Student ");
             System.out.println("4. Delete Student ");
-            System.out.println("5. Exit! ");
+            System.out.println("5. View Student Count");
+            System.out.println("6. Exit! ");
 
             System.out.println("Enter your choice : ");
             choice = sc.nextInt();
@@ -123,7 +124,11 @@ public class Main {
         }
     }
                 break;
-            case 5:
+
+            case 5 :
+                System.out.println("Total Students : "+ students.size());
+                break;
+            case 6:
                 System.out.println("Thank you for using Career Compass!");
                 break;
         
@@ -131,18 +136,6 @@ public class Main {
                 System.out.println("Invalid Choice!");
                 break;
         }
-        }while(choice!=5);
-
-
-
- 
-      
-
-
-        System.out.println("\n===== Updated Student List =====");
-        for(Student s : students){
-            s.displayStudentInfo();;
-            System.out.println();
-        }
+        }while(choice!=6);
     }
 }
