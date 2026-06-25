@@ -4,6 +4,30 @@ public class Main {
     public static void main(String[] args){
         System.out.println("Welcome to Career Compass");
 
+        CareerPath softwareEngineer =
+        new CareerPath(
+                "Software Engineer",
+                "Develops software applications and systems."
+        );
+
+CareerPath aiEngineer =
+        new CareerPath(
+                "AI/ML Engineer",
+                "Builds machine learning and artificial intelligence solutions."
+        );
+
+CareerPath dataScientist =
+        new CareerPath(
+                "Data Scientist",
+                "Analyzes data and extracts insights."
+        );
+
+CareerPath devOpsEngineer =
+        new CareerPath(
+                "DevOps Engineer",
+                "Manages deployment, cloud and automation."
+        );
+
         Scanner sc = new Scanner(System.in);
         ArrayList<Student> students = new ArrayList<>();
 
@@ -15,7 +39,8 @@ public class Main {
             System.out.println("3. Search Student ");
             System.out.println("4. Delete Student ");
             System.out.println("5. View Student Count");
-            System.out.println("6. Exit! ");
+            System.out.println("6. Recommend Career");
+            System.out.println("7. Exit! ");
 
             System.out.println("Enter your choice : ");
             choice = sc.nextInt();
@@ -128,7 +153,50 @@ public class Main {
             case 5 :
                 System.out.println("Total Students : "+ students.size());
                 break;
-            case 6:
+
+            case 6 :
+                System.out.print("Enter Student Name: ");
+String searchName = sc.nextLine();
+boolean found = false;
+
+for(Student s : students)
+{
+    if(s.getName().equalsIgnoreCase(searchName))
+    {
+        found = true;
+
+        String interest = s.getInterest();
+
+        // Recommendation Logic Here
+        if(interest.equalsIgnoreCase("Coding"))
+{
+    softwareEngineer.displayCareerPath();
+}
+else if(interest.equalsIgnoreCase("AI"))
+{
+    aiEngineer.displayCareerPath();
+}
+else if(interest.equalsIgnoreCase("Data"))
+{
+    dataScientist.displayCareerPath();
+}
+else if(interest.equalsIgnoreCase("Cloud"))
+{
+    devOpsEngineer.displayCareerPath();
+}
+else
+{
+    System.out.println("No recommendation available.");
+}
+    }
+}
+if(!found)
+{
+    System.out.println("Student not found!");
+}
+break;
+
+            case 7:
                 System.out.println("Thank you for using Career Compass!");
                 break;
         
@@ -136,6 +204,6 @@ public class Main {
                 System.out.println("Invalid Choice!");
                 break;
         }
-        }while(choice!=6);
+        }while(choice!=7);
     }
 }
