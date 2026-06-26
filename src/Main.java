@@ -40,7 +40,8 @@ CareerPath devOpsEngineer =
             System.out.println("4. Delete Student ");
             System.out.println("5. View Student Count");
             System.out.println("6. Recommend Career");
-            System.out.println("7. Exit! ");
+            System.out.println("7. View career road map ");
+            System.out.println("8. Exit! ");
 
             System.out.println("Enter your choice : ");
             choice = sc.nextInt();
@@ -196,7 +197,62 @@ if(!found)
 }
 break;
 
-            case 7:
+
+           case 7 :
+            System.out.print("Enter Career Name: ");
+String careerName = sc.nextLine();
+if(careerName.equalsIgnoreCase("Software Engineer"))
+{
+    System.out.println("\nSoftware Engineer Roadmap");
+
+    System.out.println("1. Learn Java");
+    System.out.println("2. Learn OOP");
+    System.out.println("3. Learn DSA");
+    System.out.println("4. Learn SQL");
+    System.out.println("5. Learn Git & GitHub");
+    System.out.println("6. Build Projects");
+}
+else if(careerName.equalsIgnoreCase("AI/ML Engineer"))
+{
+    System.out.println("\nAI/ML Engineer Roadmap");
+
+    System.out.println("1. Python");
+    System.out.println("2. Data Structures");
+    System.out.println("3. Statistics");
+    System.out.println("4. Machine Learning");
+    System.out.println("5. Deep Learning");
+    System.out.println("6. AI Projects");
+}
+else if(careerName.equalsIgnoreCase("Data Scientist"))
+{
+    System.out.println("\nData Scientist Roadmap");
+
+    System.out.println("1. Python");
+    System.out.println("2. SQL");
+    System.out.println("3. Statistics");
+    System.out.println("4. Data Analysis");
+    System.out.println("5. Machine Learning");
+    System.out.println("6. Data Projects");
+}
+else if(careerName.equalsIgnoreCase("DevOps Engineer"))
+{
+    System.out.println("\nDevOps Engineer Roadmap");
+
+    System.out.println("1. Linux");
+    System.out.println("2. Networking");
+    System.out.println("3. Git");
+    System.out.println("4. Docker");
+    System.out.println("5. Cloud");
+    System.out.println("6. CI/CD");
+}
+else
+{
+    System.out.println("Roadmap not available.");
+}
+
+           break;
+
+            case 8:
                 System.out.println("Thank you for using Career Compass!");
                 break;
         
@@ -204,6 +260,6 @@ break;
                 System.out.println("Invalid Choice!");
                 break;
         }
-        }while(choice!=7);
+        }while(choice!=8);
     }
 }
