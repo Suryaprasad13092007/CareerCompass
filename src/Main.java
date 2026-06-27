@@ -30,6 +30,7 @@ CareerPath devOpsEngineer =
 
         Scanner sc = new Scanner(System.in);
         ArrayList<Student> students = new ArrayList<>();
+        ArrayList<SkillTracker> trackers = new ArrayList<>();
 
         int choice;
         do{
@@ -41,7 +42,9 @@ CareerPath devOpsEngineer =
             System.out.println("5. View Student Count");
             System.out.println("6. Recommend Career");
             System.out.println("7. View career road map ");
-            System.out.println("8. Exit! ");
+            System.out.println("8. Track Skills ");
+            System.out.println("9. View Skills ");
+            System.out.println("10. Exit! ");
 
             System.out.println("Enter your choice : ");
             choice = sc.nextInt();
@@ -252,7 +255,63 @@ else
 
            break;
 
-            case 8:
+           case 8:
+
+System.out.print("Enter Student Name: ");
+String studentName = sc.nextLine();
+
+SkillTracker tracker = null;
+
+for(SkillTracker t : trackers)
+{
+    if(t.getStudentName().equalsIgnoreCase(studentName))
+    {
+        tracker = t;
+        break;
+    }
+}
+
+if(tracker == null)
+{
+    tracker = new SkillTracker(studentName);
+    trackers.add(tracker);
+}
+
+System.out.print("Enter Skill: ");
+String skill = sc.nextLine();
+
+tracker.addSkill(skill);
+
+System.out.println("Skill Added Successfully!");
+
+break;
+
+case 9:
+
+System.out.print("Enter Student Name: ");
+String name = sc.nextLine();
+
+boolean foundSkill = false;
+
+for(SkillTracker t : trackers)
+{
+    if(t.getStudentName().equalsIgnoreCase(name))
+    {
+        t.displaySkills();
+        foundSkill = true;
+        break;
+    }
+}
+
+if(!foundSkill)
+{
+    System.out.println("No skills found.");
+}
+
+break;
+
+
+            case 10:
                 System.out.println("Thank you for using Career Compass!");
                 break;
         
@@ -260,6 +319,6 @@ else
                 System.out.println("Invalid Choice!");
                 break;
         }
-        }while(choice!=8);
+        }while(choice!=10);
     }
 }
