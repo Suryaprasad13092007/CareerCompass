@@ -30,4 +30,8 @@ public String getStudentName()
     return studentName;
 }
 
+public ArrayList<String> getSkills(){
+    return skills;
+}
+
 }

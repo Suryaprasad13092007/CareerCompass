@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.util.ArrayList;
 public class Main {
     public static void main(String[] args){
-        System.out.println("Welcome to Career Compass");
+        System.out.println("***********Welcome to Career Compass**********");
 
         CareerPath softwareEngineer =
         new CareerPath(
@@ -34,7 +34,7 @@ CareerPath devOpsEngineer =
 
         int choice;
         do{
-            System.out.println("\n===== Career Compass Menu =====");
+            System.out.println("\n========== Career Compass Menu ==========");
             System.out.println("1. Add Student ");
             System.out.println("2. Dispay Students ");
             System.out.println("3. Search Student ");
@@ -44,7 +44,9 @@ CareerPath devOpsEngineer =
             System.out.println("7. View career road map ");
             System.out.println("8. Track Skills ");
             System.out.println("9. View Skills ");
-            System.out.println("10. Exit! ");
+            System.out.println("10. Career Readiness Score  ");
+            System.out.println("11. Exit! ");
+            System.out.println("========================================");
 
             System.out.println("Enter your choice : ");
             choice = sc.nextInt();
@@ -76,7 +78,7 @@ CareerPath devOpsEngineer =
         Student student = new Student(name,branch,year,interest);
         students.add(student);
         }
-         System.out.println(" Students Added Successfully!");
+         System.out.println(" \n ✓Students Added Successfully!");
 
                 break;
             case 2:
@@ -96,7 +98,7 @@ CareerPath devOpsEngineer =
             case 3:
                 if(students.isEmpty()) {
 
-        System.out.println("No students available.");
+        System.out.println(" \nNo students available.");
 
     } else {
 
@@ -109,7 +111,7 @@ CareerPath devOpsEngineer =
 
             if(s.getName().equalsIgnoreCase(searchName)) {
 
-                System.out.println("\nStudent Found:");
+                System.out.println("\n=====Student Found=====");
                 s.displayStudentInfo();
 
                 found = true;
@@ -118,7 +120,7 @@ CareerPath devOpsEngineer =
         }
 
         if(!found) {
-            System.out.println("Student not found.");
+            System.out.println("\n Student not found.");
         }
     }
                 break;
@@ -147,9 +149,9 @@ CareerPath devOpsEngineer =
         }
 
         if(deleted) {
-            System.out.println("Student deleted successfully.");
+            System.out.println("***Student deleted successfully.***");
         } else {
-            System.out.println("Student not found.");
+            System.out.println("\n Student not found.");
         }
     }
                 break;
@@ -311,7 +313,114 @@ if(!foundSkill)
 break;
 
 
-            case 10:
+case 10:
+
+System.out.print("Enter Student Name: ");
+String StudentName = sc.nextLine();
+
+System.out.print("Enter Career Name: ");
+String CareerName = sc.nextLine();
+
+boolean trackerFound = false;
+
+for(SkillTracker t : trackers)
+{
+    if(t.getStudentName().equalsIgnoreCase(StudentName))
+    {
+        trackerFound = true;
+
+        ArrayList<String> requiredSkills = new ArrayList<>();
+
+        if(CareerName.equalsIgnoreCase("Software Engineer"))
+        {
+            requiredSkills.add("Java");
+            requiredSkills.add("OOP");
+            requiredSkills.add("DSA");
+            requiredSkills.add("SQL");
+            requiredSkills.add("Git");
+            requiredSkills.add("Projects");
+        }
+        else if(CareerName.equalsIgnoreCase("AI/ML Engineer"))
+        {
+            requiredSkills.add("Python");
+            requiredSkills.add("DSA");
+            requiredSkills.add("Statistics");
+            requiredSkills.add("Machine Learning");
+            requiredSkills.add("Deep Learning");
+            requiredSkills.add("Projects");
+        }
+        else if(CareerName.equalsIgnoreCase("Data Scientist"))
+        {
+            requiredSkills.add("Python");
+            requiredSkills.add("SQL");
+            requiredSkills.add("Statistics");
+            requiredSkills.add("Data Analysis");
+            requiredSkills.add("Machine Learning");
+            requiredSkills.add("Projects");
+        }
+        else if(CareerName.equalsIgnoreCase("DevOps Engineer"))
+        {
+            requiredSkills.add("Linux");
+            requiredSkills.add("Networking");
+            requiredSkills.add("Git");
+            requiredSkills.add("Docker");
+            requiredSkills.add("Cloud");
+            requiredSkills.add("CI/CD");
+        }
+        else
+        {
+            System.out.println("Career not found.");
+            break;
+        }
+
+        int completed = 0;
+
+        for(String Skill : requiredSkills)
+        {
+            if(t.getSkills().contains(Skill))
+            {
+                completed++;
+            }
+        }
+
+        int score = (completed * 100) / requiredSkills.size();
+
+        System.out.println("\n===== Career Readiness Report =====");
+        System.out.println("Student : " + StudentName);
+        System.out.println("Career  : " + CareerName);
+        System.out.println("Readiness Score : " + score + "%");
+
+        System.out.println("\nMissing Skills:");
+
+        boolean missingFound = false;
+
+        for(String Skill : requiredSkills)
+        {
+            if(!t.getSkills().contains(Skill))
+            {
+                System.out.println("- " + Skill);
+                missingFound = true;
+            }
+        }
+
+        if(!missingFound)
+        {
+            System.out.println("None. Student is fully prepared!");
+        }
+
+        break;
+    }
+}
+
+if(!trackerFound)
+{
+    System.out.println("Student skills not found.");
+}
+
+break;
+
+
+            case 11:
                 System.out.println("Thank you for using Career Compass!");
                 break;
         
@@ -319,6 +428,10 @@ break;
                 System.out.println("Invalid Choice!");
                 break;
         }
-        }while(choice!=10);
+        }while(choice!=11);
+
+        sc.close();
     }
 }
+
+
