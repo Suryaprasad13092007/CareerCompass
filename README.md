@@ -1,6 +1,6 @@
-Career Compass 🧭
+#Career Compass 🧭
 
-Overview
+##Overview
 
 Career Compass is a Java-based career guidance and placement readiness application developed using Object-Oriented Programming (OOP) concepts.
 
@@ -8,33 +8,33 @@ The project helps students manage their profiles, explore suitable career paths 
 
 ---
 
-Screenshots
+##Screenshots
 
-Main Menu
+###Main Menu
 
-"Main Menu" (screenshots/main-menu.png)
+![Main Menu](screenshots/main-menu.png)
 
-Career Recommendation
+###Career Recommendation
 
-"Career Recommendation" (screenshots/career-recommendation.png)
+![Career Recommendation](screenshots/career-recommendation.png)
 
-Career Roadmap
+###Career Roadmap
 
-"Career Roadmap" (screenshots/career-roadmap.png)
+![Career Roadmap](screenshots/career-roadmap.png)
 
-Skill Tracking
+###Skill Tracking
 
-"Skill Tracking" (screenshots/skill-tracking.png)
+![Skill Tracking](screenshots/skill-tracking.png)
 
-Career Readiness Score
+###Career Readiness Score
 
-"Career Readiness Score" (screenshots/readiness-score.png)
+![Career Readiness Score](screenshots/readiness-score.png)
 
 ---
 
-Features
+##Features
 
-1. Student Profile Management
+###1. Student Profile Management
 
 - Add Student
 - Display Students
@@ -42,7 +42,7 @@ Features
 - Delete Student
 - View Student Count
 
-2. Career Recommendation System
+###2. Career Recommendation System
 
 Recommends suitable career paths based on student interests.
 
@@ -53,25 +53,25 @@ Supported Career Paths:
 - Data Scientist
 - DevOps Engineer
 
-3. Career Roadmap Generator
+###3. Career Roadmap Generator
 
 Provides learning roadmaps for different career paths.
 
-4. Skill Tracking System
+###4. Skill Tracking System
 
 Allows students to record and manage their completed skills.
 
-5. Career Readiness Score
+###5. Career Readiness Score
 
 Calculates a readiness percentage based on completed skills and required skills for a selected career path.
 
-6. Skill Gap Analysis
+###6. Skill Gap Analysis
 
 Identifies missing skills that need to be learned to become job-ready.
 
 ---
 
-Technologies Used
+##Technologies Used
 
 - Java
 - Object-Oriented Programming (OOP)
@@ -82,9 +82,9 @@ Technologies Used
 
 ---
 
-Project Structure
+##Project Structure
 
-CareerCompass
+###CareerCompass
 
 ├── src
 
@@ -106,7 +106,7 @@ CareerCompass
 
 ---
 
-Sample Workflow
+##Sample Workflow
 
 1. Add Student
 2. Enter Student Interest
@@ -118,7 +118,7 @@ Sample Workflow
 
 ---
 
-Concepts Demonstrated
+##Concepts Demonstrated
 
 - Classes and Objects
 - Constructors
@@ -133,7 +133,7 @@ Concepts Demonstrated
 
 ---
 
-Future Enhancements
+##Future Enhancements
 
 - File Handling
 - Database Integration
@@ -144,7 +144,7 @@ Future Enhancements
 
 ---
 
-Author
+##Author
 
 Achyutha Naga Venkata Satya Suryaprasad
 
@@ -152,6 +152,6 @@ Computer Science and Engineering Student
 
 ---
 
-Project Status
+##Project Status
 
 Career Compass V1.0 Completed ✅
