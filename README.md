@@ -8,6 +8,30 @@ The project helps students manage their profiles, explore suitable career paths 
 
 ---
 
+Screenshots
+
+Main Menu
+
+"Main Menu" (screenshots/main-menu.png)
+
+Career Recommendation
+
+"Career Recommendation" (screenshots/career-recommendation.png)
+
+Career Roadmap
+
+"Career Roadmap" (screenshots/career-roadmap.png)
+
+Skill Tracking
+
+"Skill Tracking" (screenshots/skill-tracking.png)
+
+Career Readiness Score
+
+"Career Readiness Score" (screenshots/readiness-score.png)
+
+---
+
 Features
 
 1. Student Profile Management
@@ -122,7 +146,7 @@ Future Enhancements
 
 Author
 
-Suryaprasad Achyutha
+Achyutha Naga Venkata Satya Suryaprasad
 
 Computer Science and Engineering Student
 
