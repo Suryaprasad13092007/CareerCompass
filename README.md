@@ -82,6 +82,14 @@ Identifies missing skills that need to be learned to become job-ready.
 
 ---
 
+## How to Run
+
+1. Clone the repository
+2. Open in VS Code or IntelliJ
+3. Compile all Java files
+4. Run Main.java
+
+
 ## Project Structure
 
 #### CareerCompass
